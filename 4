@@ -1,0 +1,17 @@
+name = input("Enter your name: ")
+tedad = int(input("Enter number of products: "))
+
+total_price = 0
+
+with open("sales.txt", "a") as file:
+    file.write(f"Customer : {name}\n\n")
+
+    for i in range(tedad):
+        kala = input("Enter product name: ")
+        price = int(input("Enter product price: "))
+
+        file.write(f"{kala} : {price}\n")
+        total_price += price
+
+    file.write(f"\nTotal : {total_price}\n")
+    file.write("--------------------------\n")
